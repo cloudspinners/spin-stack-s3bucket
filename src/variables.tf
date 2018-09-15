@@ -1,3 +1,7 @@
+variable "bucket_base_name" {
+  description = "The base name for the bucket."
+}
+
 variable "instance_identifier" {
   description = "A unique identifier for this instance of the stack."
 }
