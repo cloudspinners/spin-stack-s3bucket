@@ -1,4 +1,5 @@
-data "aws_caller_identity" "current" {}
+data "aws_caller_identity" "current" {
+}
 
 module "encrypted_bucket" {
   source  = "infrablocks/encrypted-bucket/aws"
@@ -8,7 +9,8 @@ module "encrypted_bucket" {
 
   tags = {
     Name               = "${var.bucket_base_name}-${data.aws_caller_identity.current.account_id}"
-    InstanceIdentifier = "${var.instance_identifier}"
-    EnvironmentName    = "${var.environment_name}"
+    InstanceIdentifier = var.instance_identifier
+    EnvironmentName    = var.environment_name
   }
 }
+

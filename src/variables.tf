@@ -24,3 +24,4 @@ variable "assume_role_arn" {
   description = "The IAM role to assume."
   default     = ""
 }
+

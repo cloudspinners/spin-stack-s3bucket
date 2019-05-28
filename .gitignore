@@ -19,3 +19,4 @@ state
 build
 dist
 stack-instance-local.yaml
+src/.terraform
